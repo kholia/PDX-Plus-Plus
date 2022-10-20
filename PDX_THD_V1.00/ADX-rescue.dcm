@@ -1,0 +1,19 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BS170-dk_Transistors-FETs-MOSFETs-Single
+F https://www.onsemi.com/pub/Collateral/BS170-D.PDF
+$ENDCMP
+#
+$CMP LM393N_LTB-dk_Linear-Comparators
+F https://www.onsemi.com/pub/Collateral/LM393-D.PDF
+$ENDCMP
+#
+$CMP PJ-102A-dk_Barrel-Power-Connectors
+F https://www.cui.com/product/resource/digikeypdf/pj-102a.pdf
+$ENDCMP
+#
+$CMP SJ1-3523N-dk_Barrel-Audio-Connectors
+F https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf
+$ENDCMP
+#
+#End Doc Library
