@@ -35,6 +35,7 @@ void setup()
   int ret;
 
   pinMode(RX, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(RX, 1);
   Serial.begin(115200);
 
@@ -50,14 +51,18 @@ void setup()
     watchdog_reboot(0, 0, 1000);
   }
 
-  // si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
+  si5351.output_enable(SI5351_CLK0, 0); // Safety first
   si5351.drive_strength(SI5351_CLK1, SI5351_DRIVE_2MA); // Set for reduced power for RX
-  si5351.set_freq(21074000 * 100ULL, SI5351_CLK1);
+  si5351.set_freq(14074000 * 100ULL, SI5351_CLK1);
   si5351.output_enable(SI5351_CLK1, 1);
 }
 
+int sensorValue = 0;
+
 void loop()
 {
-  Serial.println("Alive!");
-  delay(100);
+  sensorValue = analogRead(27); // ADC!
+  Serial.println(sensorValue);
+  Serial.print(" ");
+  delay(10);
 }
